@@ -1,0 +1,38 @@
+---
+---
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>{{site.data.details.contact.name}}</title>
+    <link rel="stylesheet" href="/assets/css/styles.css">
+    <link rel="shortcut icon" href="{{ "/favicon.ico" | prepend: site.baseurl | prepend: site.url }}" />
+  </head>
+  <body>
+    <h1 style="text-align: center;">{{site.data.details.contact.name}} || {{site.data.details.contact.date_of_birth}} </h1>
+    <h3 style="text-align: right;"><a href="mailto:p18laza@ionio.gr">{{site.data.details.contact.email}}</a></h3>
+    <h3 style="text-align: center;">{{site.data.details.education}}</h3>
+    <h2>Skills</h2>
+    <ul>
+	    {% for item in site.data.details.skills %}
+    	    <li>{{item.name}}</li>
+    	    {% endfor %}
+    </ul>
+    <h2>Languages</h2>
+    <ul>
+            {% for item in site.data.details.languages %}
+	    <li>{{item.name}} | {{item.level}}</li>
+            {% endfor %}
+    </ul>
+    <h2>Hobbies</h2>
+    <ul>
+            {% for item in site.data.details.hobbies %}
+            <li>{{item.name}}</li>
+            {% endfor %}
+    </ul>
+    <div id="ft">
+	    <p>{{site.data.details.contact.name}} &mdash; <a href="mailto:p18laza@ionio.gr">{{site.data.details.contact.email}}</a> &mdash;</p>
+    </div>
+  </body>
+</html>
+
