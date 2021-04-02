@@ -1,0 +1,10 @@
+language: ruby
+rvm:
+ - 2.2
+ - jruby
+install:
+  - bundle install --path vendor/bundle
+  - npm install
+script:
+- bundle exec rake build
+- bundle exec rake builddoc
